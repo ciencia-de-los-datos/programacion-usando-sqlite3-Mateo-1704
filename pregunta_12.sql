@@ -29,11 +29,11 @@
 --    c25 CHAR(5)
 --
 --  Escriba una consulta que retorne por cada letra
---  de la columna K0, el valor máximo de la coumna c12
+--  de la columna K0, el valor máximo de la columna c12
 --  en la tabla tbl1.
 --
 --  Rta/
---    K0  MAX(c12)  min(C12)
+--    K0  MAX(c12)  MIN(c12)
 --  0  A    938.16    135.80
 --  1  B    999.72    283.40
 --  2  C    822.81    267.42
@@ -42,3 +42,8 @@
 --
 --  >>> Escriba su codigo a partir de este punto <<<
 --
+SELECT K0, MAX(c12) AS "MAX(c12)", MIN(c12) AS "MIN(c12)"
+FROM tbl1
+GROUP BY K0
+ORDER BY K0;
+
